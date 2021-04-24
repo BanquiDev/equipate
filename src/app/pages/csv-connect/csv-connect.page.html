@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="perfil"  color="dark"></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">csvConnect</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid fixed>
+  <ion-row class="titulo">
+    <ion-col size="2">Articulo</ion-col>
+    <ion-col size="2">Genero</ion-col>
+    <ion-col size="2">Marca</ion-col>
+    <ion-col size="2">Rubro</ion-col>
+    <ion-col size="2">Talle</ion-col>
+    <ion-col size="2">Precio Venta</ion-col>
+    
+    
+  </ion-row>
+  <ion-row *ngFor="let product of products" class="products">
+    <ion-col size="2">{{product.articulo}}</ion-col>
+    <ion-col size="2">{{product.genero}}</ion-col>
+    <ion-col size="2">{{product.marca}}</ion-col>
+    <ion-col size="2">{{product.rubro}}</ion-col>
+    <ion-col size="2">{{product.talle}}</ion-col>
+    <ion-col size="2">{{product.precioDeVenta}}</ion-col>
+
+  </ion-row>
+</ion-grid>
+</ion-content>
